@@ -1,1 +1,94 @@
-
+##Transformations
+The transformations were done according to the Getting and Cleaning Data course project.
+Merges the training and the test sets to create one data set.
+Extracts only the measurements on the mean and standard deviation for each measurement.
+Uses descriptive activity names to name the activities in the data set
+Appropriately labels the data set with descriptive variable names.
+From the data set in step 4, creates a second, independent tidy data set with the average of each variablefor each activity and each subject.
+##Data
+Length: 81 columns
+Dimensions: 180 entries, 81 columns
+Class: Data frame
+NAs:0
+	Name	Class	Mode
+[1]	activity	factor	numeric
+[2]	subject	integer	numeric
+[3]	TimeDomain_BodyAccelerometer_Mean_X	numeric	numeric
+[4]	TimeDomain_BodyAccelerometer_Mean_Y	numeric	numeric
+[5]	TimeDomain_BodyAccelerometer_Mean_Z	numeric	numeric
+[6]	TimeDomain_BodyAccelerometer_StandardDeviation_X	numeric	numeric
+[7]	TimeDomain_BodyAccelerometer_StandardDeviation_Y	numeric	numeric
+[8]	TimeDomain_BodyAccelerometer_StandardDeviation_Z	numeric	numeric
+[9]	TimeDomain_GravityAccelerometer_Mean_X	numeric	numeric
+[10]	TimeDomain_GravityAccelerometer_Mean_Y	numeric	numeric
+[11]	TimeDomain_GravityAccelerometer_Mean_Z	numeric	numeric
+[12]	TimeDomain_GravityAccelerometer_StandardDeviation_X	numeric	numeric
+[13]	TimeDomain_GravityAccelerometer_StandardDeviation_Y	numeric	numeric
+[14]	TimeDomain_GravityAccelerometer_StandardDeviation_Z	numeric	numeric
+[15]	TimeDomain_BodyAccelerometerJerk_Mean_X	numeric	numeric
+[16]	TimeDomain_BodyAccelerometerJerk_Mean_Y	numeric	numeric
+[17]	TimeDomain_BodyAccelerometerJerk_Mean_Z	numeric	numeric
+[18]	TimeDomain_BodyAccelerometerJerk_StandardDeviation_X	numeric	numeric
+[19]	TimeDomain_BodyAccelerometerJerk_StandardDeviation_Y	numeric	numeric
+[20]	TimeDomain_BodyAccelerometerJerk_StandardDeviation_Z	numeric	numeric
+[21]	TimeDomain_BodyGyroscope_Mean_X	numeric	numeric
+[22]	TimeDomain_BodyGyroscope_Mean_Y	numeric	numeric
+[23]	TimeDomain_BodyGyroscope_Mean_Z	numeric	numeric
+[24]	TimeDomain_BodyGyroscope_StandardDeviation_X	numeric	numeric
+[25]	TimeDomain_BodyGyroscope_StandardDeviation_Y	numeric	numeric
+[26]	TimeDomain_BodyGyroscope_StandardDeviation_Z	numeric	numeric
+[27]	TimeDomain_BodyGyroscopeJerk_Mean_X	numeric	numeric
+[28]	TimeDomain_BodyGyroscopeJerk_Mean_Y	numeric	numeric
+[29]	TimeDomain_BodyGyroscopeJerk_Mean_Z	numeric	numeric
+[30]	TimeDomain_BodyGyroscopeJerk_StandardDeviation_X	numeric	numeric
+[31]	TimeDomain_BodyGyroscopeJerk_StandardDeviation_Y	numeric	numeric
+[32]	TimeDomain_BodyGyroscopeJerk_StandardDeviation_Z	numeric	numeric
+[33]	TimeDomain_BodyAccelerometerMagnitude_mean	numeric	numeric
+[34]	TimeDomain_BodyAccelerometerMagnitude_std	numeric	numeric
+[35]	TimeDomain_GravityAccelerometerMagnitude_mean	numeric	numeric
+[36]	TimeDomain_GravityAccelerometerMagnitude_std	numeric	numeric
+[37]	TimeDomain_BodyAccelerometerJerkMagnitude_mean	numeric	numeric
+[38]	TimeDomain_BodyAccelerometerJerkMagnitude_std	numeric	numeric
+[39]	TimeDomain_BodyGyroscopeMagnitude_mean	numeric	numeric
+[40]	TimeDomain_BodyGyroscopeMagnitude_std	numeric	numeric
+[41]	TimeDomain_BodyGyroscopeJerkMagnitude_mean	numeric	numeric
+[42]	TimeDomain_BodyGyroscopeJerkMagnitude_std	numeric	numeric
+[43]	FrequencyDomain_BodyAccelerometer_Mean_X	numeric	numeric
+[44]	FrequencyDomain_BodyAccelerometer_Mean_Y	numeric	numeric
+[45]	FrequencyDomain_BodyAccelerometer_Mean_Z	numeric	numeric
+[46]	FrequencyDomain_BodyAccelerometer_StandardDeviation_X	numeric	numeric
+[47]	FrequencyDomain_BodyAccelerometer_StandardDeviation_Y	numeric	numeric
+[48]	FrequencyDomain_BodyAccelerometer_StandardDeviation_Z	numeric	numeric
+[49]	FrequencyDomain_BodyAccelerometer_meanFreq_X	numeric	numeric
+[50]	FrequencyDomain_BodyAccelerometer_meanFreq_Y	numeric	numeric
+[51]	FrequencyDomain_BodyAccelerometer_meanFreq_Z	numeric	numeric
+[52]	FrequencyDomain_BodyAccelerometerJerk_Mean_X	numeric	numeric
+[53]	FrequencyDomain_BodyAccelerometerJerk_Mean_Y	numeric	numeric
+[54]	FrequencyDomain_BodyAccelerometerJerk_Mean_Z	numeric	numeric
+[55]	FrequencyDomain_BodyAccelerometerJerk_StandardDeviation_X	numeric	numeric
+[56]	FrequencyDomain_BodyAccelerometerJerk_StandardDeviation_Y	numeric	numeric
+[57]	FrequencyDomain_BodyAccelerometerJerk_StandardDeviation_Z	numeric	numeric
+[58]	FrequencyDomain_BodyAccelerometerJerk_meanFreq_X	numeric	numeric
+[59]	FrequencyDomain_BodyAccelerometerJerk_meanFreq_Y	numeric	numeric
+[60]	FrequencyDomain_BodyAccelerometerJerk_meanFreq_Z	numeric	numeric
+[61]	FrequencyDomain_BodyGyroscope_Mean_X	numeric	numeric
+[62]	FrequencyDomain_BodyGyroscope_Mean_Y	numeric	numeric
+[63]	FrequencyDomain_BodyGyroscope_Mean_Z	numeric	numeric
+[64]	FrequencyDomain_BodyGyroscope_StandardDeviation_X	numeric	numeric
+[65]	FrequencyDomain_BodyGyroscope_StandardDeviation_Y	numeric	numeric
+[66]	FrequencyDomain_BodyGyroscope_StandardDeviation_Z	numeric	numeric
+[67]	FrequencyDomain_BodyGyroscope_meanFreq_X	numeric	numeric
+[68]	FrequencyDomain_BodyGyroscope_meanFreq_Y	numeric	numeric
+[69]	FrequencyDomain_BodyGyroscope_meanFreq_Z	numeric	numeric
+[70]	FrequencyDomain_BodyAccelerometerMagnitude_mean	numeric	numeric
+[71]	FrequencyDomain_BodyAccelerometerMagnitude_std	numeric	numeric
+[72]	FrequencyDomain_BodyAccelerometerMagnitude_meanFreq	numeric	numeric
+[73]	FrequencyDomain_BodyBodyAccelerometerJerkMagnitude_mean	numeric	numeric
+[74]	FrequencyDomain_BodyBodyAccelerometerJerkMagnitude_std	numeric	numeric
+[75]	FrequencyDomain_BodyBodyAccelerometerJerkMagnitude_meanFreq	numeric	numeric
+[76]	FrequencyDomain_BodyBodyGyroscopeMagnitude_mean	numeric	numeric
+[77]	FrequencyDomain_BodyBodyGyroscopeMagnitude_std	numeric	numeric
+[78]	FrequencyDomain_BodyBodyGyroscopeMagnitude_meanFreq	numeric	numeric
+[79]	FrequencyDomain_BodyBodyGyroscopeJerkMagnitude_mean	numeric	numeric
+[80]	FrequencyDomain_BodyBodyGyroscopeJerkMagnitude_std	numeric	numeric
+[81]	FrequencyDomain_BodyBodyGyroscopeJerkMagnitude_meanFreq	numeric	numeric
